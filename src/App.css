@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: center; 
 }
 
 .App-logo {
@@ -36,3 +36,89 @@
     transform: rotate(360deg);
   }
 }
+
+.wrapper {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.mainForm,
+.signUp,
+.login {
+  margin: 1rem auto;
+  padding: 2rem;
+  font-size: 1.4rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: left;
+}
+
+input,
+textarea {
+  width: 50%;
+  width: clamp(20rem, 65vw, 50rem);
+  padding: 0.5rem;
+  margin: 0.5rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid gray;
+  border-radius: 5px;
+}
+textarea:focus,
+textarea:hover,
+textarea:active,
+input:focus,
+input:hover,
+input:active {
+  background-color: silver;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 0 0.5rem 1rem;
+}
+
+button {
+  min-width: 110px;
+  padding: 0.5rem;
+  background-color: #1b1b1b;
+  color: #fff;
+  border: none;
+  margin: 0.5rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  border-radius: 5px;
+}
+
+button:hover,
+button:focus,
+button:active {
+  color: #1b1b1b;
+  background-color: silver;
+}
+
+textarea {
+	min-height: 5em;
+	max-height: 50vh;
+	width: 100%;
+}
+
+footer a {
+  color: #1b1b1b;
+  font-weight: 500;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  text-decoration: none;
+}
+footer a:hover,
+footer a:focus,
+footer a:active {
+  background-color: tomato;
+}
+
+
