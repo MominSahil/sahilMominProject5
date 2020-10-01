@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/sahilMominProject5/static/css/main.4ba143d3.chunk.css",
+    "main.js": "/sahilMominProject5/static/js/main.ef0d50f7.chunk.js",
+    "main.js.map": "/sahilMominProject5/static/js/main.ef0d50f7.chunk.js.map",
+    "runtime-main.js": "/sahilMominProject5/static/js/runtime-main.63f028ed.js",
+    "runtime-main.js.map": "/sahilMominProject5/static/js/runtime-main.63f028ed.js.map",
+    "static/js/2.339acfd5.chunk.js": "/sahilMominProject5/static/js/2.339acfd5.chunk.js",
+    "static/js/2.339acfd5.chunk.js.map": "/sahilMominProject5/static/js/2.339acfd5.chunk.js.map",
+    "index.html": "/sahilMominProject5/index.html",
+    "precache-manifest.f28461599deb76e68f7be296dd5cea7f.js": "/sahilMominProject5/precache-manifest.f28461599deb76e68f7be296dd5cea7f.js",
+    "service-worker.js": "/sahilMominProject5/service-worker.js",
+    "static/css/main.4ba143d3.chunk.css.map": "/sahilMominProject5/static/css/main.4ba143d3.chunk.css.map",
+    "static/js/2.339acfd5.chunk.js.LICENSE.txt": "/sahilMominProject5/static/js/2.339acfd5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.63f028ed.js",
+    "static/js/2.339acfd5.chunk.js",
+    "static/css/main.4ba143d3.chunk.css",
+    "static/js/main.ef0d50f7.chunk.js"
+  ]
+}
