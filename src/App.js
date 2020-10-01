@@ -20,7 +20,6 @@ class App extends Component {
       showSignUp: false,
       loginId: "",
       pass: "",
-      showHide: true,
       counter: 0
     }
   }
@@ -113,16 +112,6 @@ class App extends Component {
     })
   }
 
-  // Do something here
-  // hideOnSubmit = (event) => {
-  //   event.preventDefault();
-  //   if (this.state.showLogin === true || this.state.showSignUp === true) {
-  //     this.setState ({
-  //       showHide: false
-  //     })
-  //   }
-  // }
-
   // submit the data from user to firebase
   newSignUp = (event, wish, model, why, steps) => {
     event.preventDefault();
@@ -148,31 +137,55 @@ class App extends Component {
     alert("Now any time you feel lost, visit Room of Requirement to remind you of your path.")
   }
 
+  // reseting to initial setup when clicked of signout
+  handleReset = (event) => {
+    event.preventDefault();
+    this.setState ({
+      username: "",
+      password: "",
+      wish: "",
+      model: "",
+      why: "",
+      steps: "",
+      userList: [],
+      showLogin: false,
+      showSignUp: false,
+      loginId: "",
+      pass: "",
+      showHide: true,
+      counter: 0
+    })
+  }
+
   
   render(){
     return (
-      <div className="App wrapper">
-        <h1>Room of Requirement</h1>
-        {this.state.showLogin ? null : (
-        <form action="submit" className="mainForm" onSubmit={this.hideOnSubmit}>
-          <input type="text" id="loginId" placeholder="username" onChange={this.handleChange} value={this.state.loginId}/>
-          <input type="password" id="pass" placeholder="password" onChange={this.handleChange} value={this.state.pass}/>
-          <div>
-            <button onClick={this.login}>Login</button>
-            <button onClick={this.signUp}>SignUp</button>
-          </div>
-        </form>
-        )}
-        <form action="submit">
-          {this.state.showLogin ? (<Login 
-          wish={this.state.wish}
-          steps={this.state.steps}
-          model={this.state.model}
-          why={this.state.why}
-          />) : null}
-          {this.state.showSignUp ? <SignUp handleSignUp={this.newSignUp}/> : null}
-        </form>
-        <footer><p>Created by Sahil Momin <a href="https://junocollege.com/" target="_blank" rel="noopener noreferrer">@ Juno College</a></p></footer>
+      <div className="wrapper">
+        <div className="App">
+          <h1>Room of Requirement</h1>
+          {(this.state.showLogin || this.state.showSignUp) ? null : (
+          <form action="submit" className="mainForm" onSubmit={this.hideOnSubmit}>
+            <input type="text" id="loginId" placeholder="username" onChange={this.handleChange} value={this.state.loginId}/>
+            <input type="password" id="pass" placeholder="password" onChange={this.handleChange} value={this.state.pass}/>
+            <div>
+              <button onClick={this.login}>Login</button>
+              <button onClick={this.signUp}>SignUp</button>
+            </div>
+            <h2>Write your Wish / Goal / Requirement, and we will keep it safe for when you need reminding of your path.</h2>
+          </form>
+          )}
+          <form action="submit">
+            {this.state.showLogin ? (<Login 
+            wish={this.state.wish}
+            steps={this.state.steps}
+            model={this.state.model}
+            why={this.state.why}
+            handleReset={this.handleReset}
+            />) : null}
+            {this.state.showSignUp ? <SignUp handleSignUp={this.newSignUp} handleReset={this.handleReset}/> : null}
+          </form>
+          <footer><p>Created by Sahil Momin <a href="https://junocollege.com/" target="_blank" rel="noopener noreferrer">@ Juno College</a></p></footer>
+        </div>
       </div>
     );
   }
